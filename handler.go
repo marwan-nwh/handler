@@ -59,6 +59,11 @@ func NewServeMux(groups ...[]handler) *http.ServeMux {
 			if routes[h.URI] == nil {
 				routes[h.URI] = make(map[string]handler)
 			}
+
+			method := strings.ToUpper(h.Method)
+			if routes[h.URI][method].Method != "" {
+				panic("Duplicate Routes: " + method + " " + h.URI)
+			}
 			routes[h.URI][strings.ToUpper(h.Method)] = h
 		}
 	}
