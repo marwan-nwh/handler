@@ -1,5 +1,7 @@
 # handler
 
+NOTE: DON'T USE THIS NOW, FOUND SOME FLAWS IN THE DESIGN AND WILL FIX THEM LATER.
+
 **Note:** **The package is not "go get" able**, just copy and paste it to your project and adjust it to your needs.
 
 This custom handler lets you combine routes definition with your handler definition, do authentication and parameters validation in a clean expressive way, and stop thinking about handlers names :relieved:.
